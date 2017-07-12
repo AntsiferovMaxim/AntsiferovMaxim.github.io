@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bakery</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="assets/vendor/css/animate.css">
 </head>
 <body>
 <header class="header">
@@ -51,7 +52,7 @@
 <section class="art">
     <div class="container">
         <div class="art__icon"></div>
-        <div class="art__right-side">
+        <div class="art__right-side wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">
             <h2 class="title">Art of cakes</h2>
             <h3 class="subtitle">We create delicious memories</h3>
             <div class="art__description">
@@ -72,7 +73,7 @@
                 <div class="card__description">Unique creations for unique occasions.</div>
             </div>
         </div>
-        <div class="art__left-side">
+        <div class="art__left-side wow fadeInRight" data-wow-duration="2s" data-wow-offset="50">
             <div class="photos">
                 <div class="photos__icon">
                     <div class="icon__text">Tastes so good!</div>
@@ -87,7 +88,7 @@
 </section>
 <section class="menu">
     <div class="container">
-        <div class="food-widget">
+        <div class="food-widget wow fadeInDown" data-wow-duration="2s" data-wow-offset="50" >
             <div class="food-widget__cooking-time">
                 <div class="cooking-time__title">Ready in</div>
                 <div class="cooking-time__time">40</div>
@@ -122,7 +123,7 @@
 </section>
 <section class="breakfast">
     <div class="container">
-        <div class="breakfast__left">
+        <div class="breakfast__left wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">
             <h2 class="breakfast__title">Breakfast</h2>
             <h3 class="breakfast__subtitle">7am breakfast? we`re open!</h3>
             <ul class="breakfast__menu">
@@ -143,7 +144,7 @@
                 </li>
             </ul>
         </div>
-        <div class="breakfast__right">
+        <div class="breakfast__right wow fadeInRight" data-wow-duration="2s" data-wow-offset="50">
             <div class="menu__card">
                 <header class="card__header">
                     <div class="card__est">est.</div>
@@ -230,5 +231,13 @@
         </ul>
     </nav>
 </footer>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="assets/vendor/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>
