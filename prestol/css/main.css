@@ -2483,6 +2483,7 @@ h3,
 }
 .basket__item-delete {
   padding: 5px 5px 3px;
+  margin-right: 18px;
 }
 .basket__item-delete:active {
   box-shadow: 0px 0px 3px 0px #000000 inset;
