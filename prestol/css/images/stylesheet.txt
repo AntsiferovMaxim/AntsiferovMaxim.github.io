@@ -1,0 +1,122 @@
+.stitches-icon(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.icon {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.icon-carret_bottom_sm {
+        .stitches-icon(-3px, -3px, 7px, 4px);
+    }
+
+    &.icon-carret_down {
+        .stitches-icon(-16px, -3px, 9px, 5px);
+    }
+
+    &.icon-carret_left {
+        .stitches-icon(-31px, -3px, 5px, 9px);
+    }
+
+    &.icon-carret_right {
+        .stitches-icon(-42px, -3px, 5px, 9px);
+    }
+
+    &.icon-carret_right_sm {
+        .stitches-icon(-53px, -3px, 4px, 7px);
+    }
+
+    &.icon-carret_up {
+        .stitches-icon(-63px, -3px, 9px, 5px);
+    }
+
+    &.icon-cart {
+        .stitches-icon(-78px, -3px, 25px, 22px);
+    }
+
+    &.icon-check {
+        .stitches-icon(-109px, -3px, 8px, 8px);
+    }
+
+    &.icon-close {
+        .stitches-icon(-123px, -3px, 12px, 12px);
+    }
+
+    &.icon-compare {
+        .stitches-icon(-3px, -21px, 24px, 20px);
+    }
+
+    &.icon-fb {
+        .stitches-icon(-33px, -21px, 9px, 16px);
+    }
+
+    &.icon-google {
+        .stitches-icon(-48px, -21px, 22px, 14px);
+    }
+
+    &.icon-graph {
+        .stitches-icon(-109px, -21px, 21px, 21px);
+    }
+
+    &.icon-jivosite {
+        .stitches-icon(-3px, -48px, 91px, 28px);
+    }
+
+    &.icon-mark {
+        .stitches-icon(-136px, -21px, 9px, 7px);
+    }
+
+    &.icon-mastercard {
+        .stitches-icon(-100px, -48px, 48px, 32px);
+    }
+
+    &.icon-ok {
+        .stitches-icon(-3px, -86px, 11px, 20px);
+    }
+
+    &.icon-qiwi {
+        .stitches-icon(-20px, -86px, 48px, 32px);
+    }
+
+    &.icon-search {
+        .stitches-icon(-74px, -86px, 14px, 14px);
+    }
+
+    &.icon-slider_arrow_left {
+        .stitches-icon(-94px, -86px, 9px, 15px);
+    }
+
+    &.icon-slider_arrow_right {
+        .stitches-icon(-109px, -86px, 9px, 15px);
+    }
+
+    &.icon-truck {
+        .stitches-icon(-74px, -107px, 27px, 19px);
+    }
+
+    &.icon-visa {
+        .stitches-icon(-151px, -3px, 48px, 32px);
+    }
+
+    &.icon-vk {
+        .stitches-icon(-154px, -41px, 20px, 11px);
+    }
+
+    &.icon-wallet {
+        .stitches-icon(-180px, -41px, 19px, 19px);
+    }
+
+    &.icon-webmoney {
+        .stitches-icon(-154px, -66px, 48px, 32px);
+    }
+
+    &.icon-yandex {
+        .stitches-icon(-124px, -104px, 48px, 32px);
+    }
+
+    &.icon-youtube {
+        .stitches-icon(-178px, -104px, 22px, 21px);
+    }
+}

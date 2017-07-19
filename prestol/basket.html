@@ -1,0 +1,443 @@
+<!doctype html>
+<html class="no-js" lang="ru"><head>
+    <title>Корзина</title>
+    <meta name="description" content="Корзина">
+    <meta name="keywords" content="Корзина">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/main.less">
+    <script src="/js/vendor/less.js" type="text/javascript"></script> -->
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+<![endif]-->
+
+<div id="main">
+    <header id="header">
+        <div class="header__top">
+            <div class="main-container">
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <ul class="header__nav">
+                            <li class="header__nav-item"><a href="#" class="header__nav-link">О компании</a></li>
+                            <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка</a></li>
+                            <li class="header__nav-item"><a href="#" class="header__nav-link">Оплата</a></li>
+                            <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <div class="header__controls">
+                            <a href="basket.html" class="header__controls-item"><span class="icon_cart header__controls-icon"></span>Корзина <span class="qty">(1)</span></a>
+                            <a href="#" class="header__controls-item"><span class="icon_compare header__controls-icon"></span>Сравнение <span class="qty"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1-2 clearfix">
+                    <a href="index.html" class="header__logo"></a>
+
+                    <div class="header__location">
+                        <label>
+                            Ваш город:
+                            <select class="styler header__location-select">
+                                <option>Москва</option>
+                                <option>Москва 2</option>
+                                <option>Москва 3</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-sm-1-2">
+                    <div class="header__phone-block">
+                        <div class="header__phone">
+                            <a href="tel:89222188176" class="header__phone-item">8 (922) 218-81-76</a>
+                            <a href="tel:89222188177" class="header__phone-item">8 (922) 218-81-77</a>
+                        </div>
+
+                        <a href="#feedback" class="btn btn_lg header__phone-btn modal-btn">Обратная связь</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="main-container">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 main-nav__col">
+                    <a href="/catalog/" class="main-nav__catalog">
+                        <span class="main-nav__catalog-btn"><span></span><span></span><span></span></span>
+                        <span class="main-nav__catalog-text">Каталог товаров</span>
+                    </a>
+                </div>
+
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-5-12 main-nav__col">
+                    <ul class="main-nav__menu">
+
+
+                        <li class="main-nav__menu-item">
+                            <a href="/articles/" title="Статьи" class="main-nav__menu-link">Статьи</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="/akcii/" title="Корзина" class="main-nav__menu-link">Корзина</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="/novosti/" title="Новости" class="main-nav__menu-link">Новости</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pure-u-1 pure-u-lg-1-3 main-nav__col">
+                    <div class="main-nav__search">
+                        <form method="get" action="/catalog/" style="margin:0">
+                            <a href="#" class="icon_search main-nav__search-btn"></a>
+                            <input name="q" type="search" class="main-nav__search-input" placeholder="Поиск по каталогу" onclick="this.placeholder=''" onblur="this.placeholder='Поиск по каталогу'">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <ul class="breadrumbs">
+            <li class="breadrumbs__item">
+                <a href="/" class="breadrumbs__link noarrow">Главная</a>
+            </li>
+        </ul>
+    </div>
+    <div class="catalog">
+        <div class="main-container">
+            <div class="basket__page-title">
+                <div class="h2">Корзина</div>
+            </div>
+            <div class="basket__container">
+                <div class="basket__products">
+                    <div class="basket__item">
+                        <div class="basket__item-img"><img src="img/item-img.png" alt="item"></div>
+                        <div class="basket__item-info">
+                            <div class="basket__item-title">Гранит Джиало Венециано</div>
+                            <div class="basket__item-description">(Absolute Black)  </div>
+                        </div>
+                        <div class="basket__item-amount">
+                            <a href="#" class="item-amount__minus">-</a>
+                            <span class="item-amount__text">2</span>
+                            <a href="#" class="item-amount__plus">+</a>
+                        </div>
+                        <div class="basket__item-area-once"><span class="basket__item-area">240</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <div class="basket__item-area-total"><span class="area__total">480</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <a href="#" class="basket__item-delete"><img src="img/delete.png" alt="delete"></a>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item-img"><img src="img/item-img.png" alt="item"></div>
+                        <div class="basket__item-info">
+                            <div class="basket__item-title">Гранит Джиало Венециано</div>
+                            <div class="basket__item-description">(Absolute Black)  </div>
+                        </div>
+                        <div class="basket__item-amount">
+                            <a href="#" class="item-amount__minus">-</a>
+                            <span class="item-amount__text">2</span>
+                            <a href="#" class="item-amount__plus">+</a>
+                        </div>
+                        <div class="basket__item-area-once"><span class="basket__item-area">240</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <div class="basket__item-area-total"><span class="area__total">480</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <a href="#" class="basket__item-delete"><img src="img/delete.png" alt="delete"></a>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item-img"><img src="img/item-img.png" alt="item"></div>
+                        <div class="basket__item-info">
+                            <div class="basket__item-title">Гранит Джиало Венециано</div>
+                            <div class="basket__item-description">(Absolute Black)  </div>
+                        </div>
+                        <div class="basket__item-amount">
+                            <a href="#" class="item-amount__minus">-</a>
+                            <span class="item-amount__text">2</span>
+                            <a href="#" class="item-amount__plus">+</a>
+                        </div>
+                        <div class="basket__item-area-once"><span class="basket__item-area">240</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <div class="basket__item-area-total"><span class="area__total">480</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <a href="#" class="basket__item-delete"><img src="img/delete.png" alt="delete"></a>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item-img"><img src="img/item-img.png" alt="item"></div>
+                        <div class="basket__item-info">
+                            <div class="basket__item-title">Гранит Джиало Венециано</div>
+                            <div class="basket__item-description">(Absolute Black)  </div>
+                        </div>
+                        <div class="basket__item-amount">
+                            <a href="#" class="item-amount__minus">-</a>
+                            <span class="item-amount__text">2</span>
+                            <a href="#" class="item-amount__plus">+</a>
+                        </div>
+                        <div class="basket__item-area-once"><span class="basket__item-area">240</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <div class="basket__item-area-total"><span class="area__total">480</span><span class="basket__item-badge">₽/м<sup>2</sup></span></div>
+                        <a href="#" class="basket__item-delete"><img src="img/delete.png" alt="delete"></a>
+                    </div>
+                </div>
+                <div class="basket__footer">
+                    <div class="basket__footer-top">
+                        <div class="basket__result-price">
+                            <div class="result-price__container">
+                                <div class="result-price__text">Итого:</div>
+                                <span class="area__total">480</span><span class="basket__item-badge">₽/м<sup>2</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__footer-bottom">
+                        <a href="#" class="btn-left">Продолжить покупки</a>
+                        <a href="#" class="btn-right">Перейти к оформлению</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="footer__nav-row">
+        <div class="main-container">
+            <div class="pure-g">
+                <div class="pure-u-1-2 pure-u-md-5-24">
+                    <div class="h3 footer__title">Каталог</div>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="/catalog/filter/galka/zlatolit/zmeevik/lemezit/mramor/travertin/yashma/?open=vid" title="Виды камня" class="footer__menu-link">Виды камня</a>
+                        </li>
+                        <li>
+                            <a href="/catalog/filter/bruschatka/valuny-i-glyby/galka/kroshka/?open=prodtype" title="Виды продукции" class="footer__menu-link">Виды продукции</a>
+                        </li>
+                        <li>
+                            <a href="/catalog/filter/galtovannyj/kolotyj/pilennyj/proizvolnoj-formy-neobrabotannyj/shlifovannyj/?open=faktura" title="Фактура камня" class="footer__menu-link">Фактура камня</a>
+                        </li>
+                        <li>
+                            <a href="/catalog/filter/plitnyak/butovyj-kamen/dolomit/izvestnyak/kvarczit/peschannik/rakushechnik/slanecz/?open=type" title="Типы камней" class="footer__menu-link">Типы камней</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-5-24">
+                    <div class="h3 footer__title">Компания</div>
+                    <ul class="footer__menu">
+
+
+                        <li>
+                            <a href="/o-kompanii/" title="О компании" class="footer__menu-link">О компании</a>
+                        </li>
+                        <li>
+                            <a href="/dostavka/" title="Доставка" class="footer__menu-link">Доставка</a>
+                        </li>
+                        <li>
+                            <a href="/oplata/" title="Оплата" class="footer__menu-link">Оплата</a>
+                        </li>
+                        <li>
+                            <a href="/kontakty/" title="Контакты" class="footer__menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="h3 footer__title">Полезные материалы</div>
+                    <ul class="footer__menu">
+
+
+                        <li>
+                            <a href="/landshaftniy-disayn/" title="Ландшафтный дизайн" class="footer__menu-link">Ландшафтный дизайн</a>
+                        </li>
+                        <li>
+                            <a href="/statyi-o-kamne/" title="Статьи о камне" class="footer__menu-link">Статьи о камне</a>
+                        </li>
+                    </ul>
+                    <a href="/sitemap/" class="link footer__site-map-link">Карта сайта</a>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-4">
+                    <div class="h3 footer__title">Мы принимаем</div>
+                    <div class="payment">
+                        <span class="payment__item icon_visa"></span>
+                        <span class="payment__item icon_mastercard"></span>
+                        <span class="payment__item icon_qiwi"></span>
+                        <span class="payment__item icon_yandex"></span>
+                        <span class="payment__item icon_webmoney"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="pure-g pure-middle">
+            <div class="pure-u-1 pure-u-sm-1-2">
+                <div class="pure-inner">
+                    <div class="footer__details">
+                        <p>2012-2017. Все права защищены.</p>
+                        <p>Официальный сайт компании ООО «Престол»</p>
+                        <p>Информация на сайте является публичной офертой</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-sm-1-2">
+                <div class="pure-inner">
+                    <div class="footer__phone-block">
+                        <div class="footer__phone">
+                            <a href="tel:89222188176" class="footer__phone-item">8 (922) 218-81-76</a>
+                            <a href="tel:89222188177" class="footer__phone-item">8 (922) 218-81-77</a>
+                        </div>
+
+                        <a href="#feedback" class="btn btn_lg footer__phone-btn modal-btn">Обратная связь</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-sm-1-2">
+                <div class="pure-inner">
+                    <div class="footer__socials">
+                        <a href="#" class="footer__socials-item">
+								<span class="footer__socials-icon">
+									<span class="icon_vk"></span>
+								</span>
+                        </a>
+                        <a href="#" class="footer__socials-item">
+								<span class="footer__socials-icon">
+									<span class="icon_fb"></span>
+								</span>
+                        </a>
+                        <a href="#" class="footer__socials-item">
+								<span class="footer__socials-icon">
+									<span class="icon_ok"></span>
+								</span>
+                        </a>
+                        <a href="#" class="footer__socials-item">
+								<span class="footer__socials-icon">
+									<span class="icon_google"></span>
+								</span>
+                        </a>
+                        <a href="#" class="footer__socials-item">
+								<span class="footer__socials-icon">
+									<span class="icon_youtube"></span>
+								</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-sm-1-2">
+                <div class="pure-inner">
+                    <div class="footer__vidjet">
+                        <span class="icon_jivosite"></span><br>
+                        <a style="color:#c0c0c0;text-decoration:none;" href="http://www.hostcms.ru" target="_blank">Система управления сайтом Host CMS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="overlay"></div>
+
+<div id="feedback" class="modal" style="margin-top: -240.5px; margin-left: -240px;">
+    <a href="#" class="modal__close icon_close"></a>
+    <div class="modal__title">Обратный звонок</div>
+    <form class="basic-form modal__form">
+        <div class="input-row">
+            <label class="required">
+                <span class="label-text">Ваше имя:</span>
+                <input type="text" placeholder="Иванов Иван Иванович" onclick="this.placeholder=''" onblur="this.placeholder='Иванов Иван Иванович'">
+            </label>
+        </div>
+
+        <div class="input-row">
+            <label class="required">
+                <span class="label-text">Номер телефона:</span>
+                <input type="text" class="phone-input" placeholder="+7 (492) 456-67-67" onclick="this.placeholder=''" onblur="this.placeholder='+7 (492) 456-67-67'">
+            </label>
+        </div>
+
+        <div class="input-row">
+            <label class="">
+                <span class="label-text">Сообщение:</span>
+                <textarea rows="3" placeholder="Сообщение:" onclick="this.placeholder=''" onblur="this.placeholder='Сообщение:'"></textarea>
+            </label>
+        </div>
+
+        <div class="input-row text_center">
+            <a href="#" class="btn modal__submit">Отправить</a>
+        </div>
+    </form>
+</div>
+
+<div id="oneclick" class="modal" style="margin-top: -240.5px; margin-left: -240px;">
+    <a href="#" class="modal__close icon_close"></a>
+    <div class="modal__title">Заказ в 1 клик</div>
+    <form class="basic-form modal__form">
+        <div class="input-row">
+            <label class="required">
+                <span class="label-text">Ваше имя:</span>
+                <input type="text" placeholder="Иванов Иван Иванович" onclick="this.placeholder=''" onblur="this.placeholder='Иванов Иван Иванович'">
+            </label>
+        </div>
+
+        <div class="input-row">
+            <label class="required">
+                <span class="label-text">Номер телефона:</span>
+                <input type="text" class="phone-input" placeholder="+7 (492) 456-67-67" onclick="this.placeholder=''" onblur="this.placeholder='+7 (492) 456-67-67'">
+            </label>
+        </div>
+
+        <div class="input-row">
+            <label class="">
+                <span class="label-text">Заказ:</span>
+                <textarea rows="3" placeholder="Заказ" onclick="this.placeholder=''" onblur="this.placeholder='Заказ'"></textarea>
+            </label>
+        </div>
+
+        <div class="input-row text_center">
+            <a href="#" class="btn modal__submit">Отправить</a>
+        </div>
+    </form>
+</div>
+
+<div id="oplata" class="modal" style="margin-top: -240.5px; margin-left: -240px;">
+    <a href="#" class="modal__close icon_close"></a>
+    <div class="modal__title">Оплата</div>
+    <form class="basic-form modal__form">
+        <p>Покупки, совершенные в нашей компании, вы можете оплатить одним из следующих способов:</p>
+        <ul class="about__list">
+            <li>Наличными. Оплата наличными осуществляется на месте получения товара. </li>
+            <li>Оплата по безналичному расчету. </li>
+        </ul>
+    </form>
+</div>
+
+<div id="dostavka" class="modal" style="margin-top: -240.5px; margin-left: -240px;">
+    <a href="#" class="modal__close icon_close"></a>
+    <div class="modal__title">Доставка</div>
+    <form class="basic-form modal__form">
+        <p>В нашей компании существует собственная отработанная система логистики, проверенная годами. Мы доставляем камень напрямую от производителя в любую точку страны. Наша компания заинтересована в том, чтобы ваш камень был доставлен вовремя и в идеальном состоянии. После оформления заказа на сайте с Вами свяжется менеджер, чтобы предоставить подробную информацию и подтвердить заказ. Отдел логистики подберет удобный для Вас вариант доставки. После согласования стоимости доставки, мы заключаем с Вами договор. Ваш заказ будет доставлен в оговоренный срок и в отличном состоянии. Камень перевозится в специальной упаковке, укладкой в которую занимаются обученные для этого люди. Перед оплатой заказа Вы проверяете и осматриваете доставленный товар. Мы гарантируем высокое качество обслуживания, минимальные сроки доставки и индивидуальный подход к каждому клиенту.</p>
+    </form>
+</div>
+
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script src="js/vendor/jquery.formstyler.min.js"></script>
+<script src="js/vendor/jquery.maskedinput.js"></script>
+<script src="js/vendor/jquery-ui.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body></html>

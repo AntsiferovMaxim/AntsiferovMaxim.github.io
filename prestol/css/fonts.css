@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Verdana';
+	src: url('fonts/Verdana.eot');
+	src: url('fonts/Verdana.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Verdana.woff2') format('woff2'),
+		url('fonts/Verdana.woff') format('woff'),
+		url('fonts/Verdana.ttf') format('truetype'),
+		url('fonts/Verdana.svg#Verdana') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url('fonts/Verdana-Bold.eot');
+	src: url('fonts/Verdana-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Verdana-Bold.woff2') format('woff2'),
+		url('fonts/Verdana-Bold.woff') format('woff'),
+		url('fonts/Verdana-Bold.ttf') format('truetype'),
+		url('fonts/Verdana-Bold.svg#Verdana-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ALS Rubl';
+	src: url('fonts/ALSRubl.eot');
+	src: url('fonts/ALSRubl.eot?#iefix') format('embedded-opentype'),
+		url('fonts/ALSRubl.woff') format('woff'),
+		url('fonts/ALSRubl.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url('fonts/HelveticaNeueCyr-Roman.eot');
+	src: url('fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+		url('fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+		url('fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
