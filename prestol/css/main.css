@@ -2561,6 +2561,7 @@ h3,
   }
   .basket__item {
     flex-wrap: wrap;
+    padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 610px) {
