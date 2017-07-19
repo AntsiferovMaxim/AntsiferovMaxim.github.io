@@ -2478,7 +2478,10 @@ h3,
 .basket__item-area-total {
   font-size: 18px;
   color: #ff2d2d;
-  margin: 0 25px;
+  margin: 0 5px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
 }
 .basket__item-delete {
   padding: 5px 5px 3px;
@@ -2565,7 +2568,7 @@ h3,
     padding-top: 10px;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 640px) {
   .basket__item-img {
     width: 100%;
     display: flex;
@@ -2573,7 +2576,7 @@ h3,
     margin: 10px 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 510px) {
   .basket__item-amount {
     width: 100%;
     display: flex;
@@ -2587,6 +2590,11 @@ h3,
     flex-direction: column-reverse;
     margin-top: 20px;
     height: 88px;
+  }
+}
+@media screen and (max-width: 345px) {
+  .basket__item {
+    flex-direction: column;
   }
 }
 #main {
