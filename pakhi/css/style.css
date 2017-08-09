@@ -67,6 +67,7 @@ label{
 .navigation {
 	margin-left: auto;
 	margin-top: -20px;
+	z-index: 100;
 }
 
 .prom__icon {
