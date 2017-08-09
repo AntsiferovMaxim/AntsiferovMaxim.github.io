@@ -5,10 +5,7 @@ label.mobile_menu span {
 	  display: none;
 	  
 }
-.navigation{
-	float:left;
-	margin-top: -0.8em;
-}
+
 .nav {
 	/* General Font */
 	
@@ -404,6 +401,14 @@ input#mobile_menu { display: none; }
 	}
 }
 @media only screen and (max-width:480px) {
+	.header__control-btn {
+		margin-top: -88%;
+	}
+
+	.navigation {
+		margin-top: -61%;
+	}
+
 	label.mobile_menu {
 		padding: 7px 0;
 		margin-top: 8px;

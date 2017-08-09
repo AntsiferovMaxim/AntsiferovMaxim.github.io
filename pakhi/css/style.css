@@ -37,7 +37,85 @@ ul{
 label{
 	margin:0;
 }
+
+.header__logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border: 2px solid #ed9418;
+	width: 25%;
+}
+
+.header__logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	background: #1c242b;
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+}
+
+.navigation {
+	margin-left: auto;
+	margin-top: -20px;
+}
+
+.prom__icon {
+	margin-right: 5px;
+}
+
+.prom-ua {
+	height: 40px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+svg #basket-svg, svg #search-svg {
+	fill: #4c5157;
+	transition: all .4s;
+}
+
+.header__basket svg, .header__search svg {
+	width: 60%;
+	height: 60%;
+}
+
+.header .btn:hover svg #basket-svg, .header .btn:hover svg #search-svg {
+	fill: #8d9298;
+}
+
+.header .btn:hover .header__basket, .header .btn:hover .header__search {
+	border: 1px solid #8d9298;
+}
+
+
+.header__basket, .header__search {
+	border-radius: 50%;
+	border: 1px solid #4c5157;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /*-----start-header----*/
+.header {
+	width: 100%;
+	height: 110px;
+}
+
+
 .top-header{
 	padding:2em 0;
 	background:#1c242b;
@@ -2771,8 +2849,34 @@ li.selector {
 	width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+	.header .container {
+		flex-wrap: wrap;
+	}
+
+	.nav {
+		padding-left: 11%;
+	}
+
+	.header__logo {
+		order: 1;
+		width: 20%;
+	}
+
+	.header__control-btn {
+		order: 2;
+	}
+
+	.navigation {
+		order: 3;
+		width: 100%;
+	}
+}
+
 /* Tablet */
 @media screen and (max-width: 768px) {
+
+
 	.services_nav_list {
 		display: none;
 	}
@@ -3397,6 +3501,18 @@ h3.c-head{
 }
 
 @media screen and (max-width: 800px) {
+	.navigation {
+		z-index: 10;
+	}
+
+	.header__logo {
+		width: 17%;
+	}
+
+	.navigation__content {
+		background: #1c242b;
+	}
+
 	.logo {
 		width: 26%;
 		margin-top:0;
@@ -3710,6 +3826,13 @@ h3.c-head{
 	}
 }
 @media screen and (max-width: 768px) {
+	.header__logo {
+		width: 100px;
+		height: 50px;
+		margin-left: 17px;
+		margin-top: 5px;
+	}
+
 	.contact-form-main {
 		width: 35%;
 	}
@@ -3920,7 +4043,7 @@ h3.c-head{
 	}
 	.mens-toolbar .pager {
 		padding: 4px 2px 2px 10px;
-`	}		
+	}
 	.mens-toolbar .sort {
 		width: 50%;
 	}
