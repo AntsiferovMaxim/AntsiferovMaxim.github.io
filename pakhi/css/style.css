@@ -38,6 +38,10 @@ label{
 	margin:0;
 }
 
+.cnt {
+	height: 72vh;
+}
+
 .header__logo {
 	position: absolute;
 	top: 0;
