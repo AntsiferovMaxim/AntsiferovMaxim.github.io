@@ -258,8 +258,15 @@ input#mobile_menu { display: none; }
 	.nav > li > a{
 		padding:10px 12px;
 	}
+
+	.navigation {
+		margin-left: 10%;
+	}
 }
 @media only screen and (max-width:800px) {
+	.navigation {
+		margin: 0;
+	}
 	.nav {
       display: none;
     }
