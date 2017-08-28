@@ -25,7 +25,7 @@ var caramel = document.createElement("img");
 caramel.onload = function() {
 	caramel_img = this;
 };
-caramel.src = "caramel.png";
+caramel.src = "AntsiferovMaxim.github.io/caramel/caramel.png";
 
 function drawPoint(x, y, r) {
 	ctx.fillStyle = "#000";
