@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #eee;
+        }
+    </style>
+    <script type="text/javascript" src="js/vec.js"></script>
+    <script type="text/javascript" src="js/points.js"></script>
+    <script type="text/javascript" src="js/bezier_l.js"></script>
+    <script type="text/javascript" src="js/bezier_r.js"></script>
+    <script type="text/javascript" src="js/lenbyy.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Khand:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+</head>
+<body>
+<main class="container">
+    <header class="main-header">
+        <h1 class="main-header__title">A chaque recette son caramel</h1>
+        <p class="main-header__desc">Parce que les caramels Nigay sont toujours
+            plus gourmands et colores,<br>ils adoptent saveurs, textures et teinters
+            selon l`application recherhee...</p>
+    </header>
+    <ul class="products">
+        <li class="product glaces">
+            <div class="product__wrapper">
+                <div class="product__container">
+                    <h3 class="product__title">Glaces</h3>
+                    <div class="open-popup-container">
+                        <button data-for="glaces" class="btn btn_open-popup"></button>
+                        <svg>
+                            <line
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="0"/>
+                        </svg>
+                    </div>
+                    <div id="glaces" class="popup-desc hidden">
+                        <div class="popup-desc__title">Glaces</div>
+                        <ul class="popup-desc__items">
+                            <li class="popup-desc__item">Caramels aromatiques</li>
+                            <li class="popup-desc__item">Caramels aromatiques epaissis</li>
+                            <li class="popup-desc__item">Caramels colorants</li>
+                            <li class="popup-desc__item">Burnt sugars</li>
+                            <li class="popup-desc__item">Fourrages caramel</li>
+                            <li class="popup-desc__item">Eclats de caramel enrobes</li>
+                        </ul>
+                        <button class="popup-desc__close-btn"></button>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="product sodas"></li>
+        <li class="product chocolats"></li>
+        <li class="product produits-laitiers"></li>
+        <li class="product biers"></li>
+        <li class="product alcools"></li>
+        <li class="product biscuits"></li>
+        <li class="product soupes-and-sauces"></li>
+        <li class="product boissons-energisantes"></li>
+        <li class="product pet-food"></li>
+    </ul>
+</main>
+<canvas class="canvas-animation" id="c" height="4000"></canvas>
+<script src="js/common.js"></script>
+<script src="js/canvas.js"></script>
+</body>
+</html>

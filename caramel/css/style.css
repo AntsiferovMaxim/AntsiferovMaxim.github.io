@@ -1,0 +1,274 @@
+html {
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.canvas-animation {
+    background:url(../img/bg1.jpg) center center no-repeat;
+    background-size:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.main-header {
+    font-family: 'Khand', sans-serif;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.main-header__title, .main-header__desc {
+    text-align: center;
+}
+
+.main-header__title {
+    font-weight: 500;
+    font-size: 5.7rem;
+    text-transform: uppercase;
+}
+
+.main-header__desc {
+    font-weight: 300;
+    font-size: 2.038rem;
+    line-height: 1.1;
+}
+
+.products {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product {
+    position: absolute;
+    width: 15%;
+}
+
+.product__wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 135%;
+}
+
+.product__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dev {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.open-popup-container {
+    position: relative;
+}
+
+.open-popup-container:before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: #ce9500;
+}
+
+.btn_open-popup {
+    position: absolute;
+    background-color: #ce9500;
+    border-radius: 50%;
+    padding-bottom: 10px;
+    width: 108px;
+    height: 108px;
+    padding-left: 29px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.btn_open-popup:hover {
+    background-color: #9c6900;
+    transform: scale(1.1);
+}
+
+.btn_open-popup:hover::before,
+.btn_open-popup:hover::after {
+    background-color: #e8e8e8;
+}
+
+.btn_open-popup::after,
+.btn_open-popup::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 31px;
+    height: 8px;
+    margin: 0 9px;
+    transition: all .4s;
+}
+
+.btn_open-popup::after {
+    transform: rotate(90deg);
+}
+
+.product__title {
+    position: absolute;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.75rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.popup-desc {
+    position: absolute;
+    background-color: #ce9600;
+    color: #fff;
+    top: 20%;
+    left: 20%;
+    width: 340px;
+    padding: 25px 30px 40px 30px;
+    box-sizing: content-box;
+    animation: open .5s;
+}
+
+.animation-open {
+    animation: open .5s;
+}
+
+.animation-close {
+    animation: close .5s;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.popup-desc__title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.75rem;
+    text-transform: uppercase;
+}
+
+.popup-desc__item {
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.popup-desc__item::before {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 5px solid transparent;
+    border-left: 7px solid white;
+    border-bottom: 5px solid transparent;
+    margin-right: 9px;
+}
+
+.popup-desc__close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #3c3c3b;
+    border-left: 60px solid transparent;
+    outline: none;
+    background-color: #ce9600;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.popup-desc__close-btn:hover {
+    border-top: 60px solid #292928;
+}
+
+.popup-desc__close-btn::before {
+    content: '';
+    position: absolute;
+    top: -46px;
+    left: -23px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("../img/close.png") 100% 100% no-repeat;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Glaces */
+.glaces {
+    margin-top: 13vh;
+    margin-left: 25vw;
+}
+
+.glaces .product__title {
+    bottom: 0;
+    left: 20%;
+}
+
+.glaces .open-popup-container {
+    height: 60%;
+}
+
+.glaces .btn_open-popup {
+    right: 0;
+    bottom: 0;
+}
+
+.glaces .open-popup-container:before {
+    transform: rotate(90deg);
+}
+
+.glaces line {
+    stroke: #ce9500;
+    stroke-width: 4;
+}
+
