@@ -122,8 +122,8 @@ module.exports = g;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Unit; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lib_health_bar__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lib_health__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lib_configs_health_bar_config__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lib_health__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lib_configs_health_bar_config__ = __webpack_require__(46);
 
 
 
@@ -140,7 +140,7 @@ var Unit = /** @class */ (function () {
             !_this.isInteract &&
                 (_this.isInteract = distanceBetween(circleCenter, 80, _this.body.position));
             _this.isInteract && _this.interact();
-            _this.healthBar.setPosition(_this.body.x - 48, _this.body.y + 30);
+            _this.healthBar.setPosition(_this.body.x - 30, _this.body.y + 30);
         };
         this.kill = function () {
             _this.body.loadTexture(_this.config.sprites.death);
@@ -333,7 +333,7 @@ module.exports = __webpack_require__(5);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_game__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_assets_favicon_ico__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_assets_favicon_ico__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_assets_favicon_ico___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_assets_favicon_ico__);
 
 
@@ -395,9 +395,11 @@ module.exports = function(originalModule) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_phaser__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_phaser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_states_preloader_state__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_states_boot_state__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_states_main_state__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_states_game_over_state__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_states_boot_state__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_states_main_state__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_states_game_over_state__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_states_lose_state__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_states_win_state__ = __webpack_require__(54);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -415,6 +417,8 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
+
+
 var ZombieClicker = /** @class */ (function (_super) {
     __extends(ZombieClicker, _super);
     function ZombieClicker(config) {
@@ -423,6 +427,8 @@ var ZombieClicker = /** @class */ (function (_super) {
         _this.state.add('preload', __WEBPACK_IMPORTED_MODULE_3_states_preloader_state__["a" /* PreloadState */], false);
         _this.state.add('main', __WEBPACK_IMPORTED_MODULE_5_states_main_state__["a" /* MainState */], false);
         _this.state.add('game-over', __WEBPACK_IMPORTED_MODULE_6_states_game_over_state__["a" /* GameOverState */], false);
+        _this.state.add('lose', __WEBPACK_IMPORTED_MODULE_7_states_lose_state__["a" /* LoseState */], false);
+        _this.state.add('win', __WEBPACK_IMPORTED_MODULE_8_states_win_state__["a" /* WinState */], false);
         _this.state.start('boot');
         return _this;
     }
@@ -108520,7 +108526,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PreloadState; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_services_load_images__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lib_load_images__ = __webpack_require__(16);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -108539,24 +108545,42 @@ var PreloadState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PreloadState.prototype.preload = function () {
-        this.game.load.image('bullet', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["b" /* ballPng */]);
-        this.game.load.image('background', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["a" /* background */]);
-        this.game.load.image('tower', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["l" /* tower */]);
-        this.game.load.image('high-score-background', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["h" /* highScoreBackground */]);
-        this.game.load.image('bullets-icon', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["d" /* bulletsIcon */]);
-        this.game.load.image('bullets-background', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["c" /* bulletsBackground */]);
-        this.game.load.image('frag-icon', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["g" /* fragIcon */]);
-        this.game.load.image('frag-background', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["f" /* frafBackground */]);
-        this.game.load.spritesheet('cowboy', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["e" /* cowboySprite */], 64, 64, 5);
-        this.game.load.spritesheet('zombie1-walk', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["o" /* zombie1Walk */], 64, 64, 64);
-        this.game.load.spritesheet('zombie1-death', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["n" /* zombie1Death */], 64, 64, 32);
-        this.game.load.spritesheet('zombie1-attack', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["m" /* zombie1Attack */], 64, 64, 32);
-        this.game.load.spritesheet('zombie3-walk', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["r" /* zombie3Walk */], 64, 64, 64);
-        this.game.load.spritesheet('zombie3-death', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["q" /* zombie3Death */], 64, 64, 32);
-        this.game.load.spritesheet('zombie3-attack', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["p" /* zombie3Attack */], 64, 64, 32);
-        this.game.load.spritesheet('ranger-walk', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["k" /* rangerWalk */], 64, 64, 32);
-        this.game.load.spritesheet('ranger-death', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["j" /* rangerDeath */], 64, 64, 16);
-        this.game.load.spritesheet('ranger-attack', __WEBPACK_IMPORTED_MODULE_1_services_load_images__["i" /* rangerAttack */], 64, 64, 32);
+        var initialLocalStorage = {
+            max: {
+                wave: 0,
+                score: 0
+            },
+            current: {
+                wave: 0,
+                score: 0
+            }
+        };
+        localStorage.setItem('zombie-clicker', JSON.stringify(initialLocalStorage));
+        this.game.load.image('bullet', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["b" /* ballPng */]);
+        this.game.load.image('background', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["a" /* background */]);
+        this.game.load.image('tower', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["q" /* tower */]);
+        this.game.load.image('high-score-background', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["i" /* highScoreBackground */]);
+        this.game.load.image('bullets-icon', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["d" /* bulletsIcon */]);
+        this.game.load.image('bullets-background', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["c" /* bulletsBackground */]);
+        this.game.load.image('frag-icon', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["g" /* fragIcon */]);
+        this.game.load.image('frag-background', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["f" /* frafBackground */]);
+        this.game.load.image('lose-red-wall', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["k" /* loseWall */]);
+        this.game.load.image('lose-red-header', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["j" /* loseHeader */]);
+        this.game.load.image('win-green-header', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["r" /* winHeader */]);
+        this.game.load.image('win-wall', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["s" /* winWall */]);
+        this.game.load.image('restart-button-icon', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["p" /* restartButtonIcon */]);
+        this.game.load.image('restart-button-background', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["o" /* restartButtonBackground */]);
+        this.game.load.image('frags-wall', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["h" /* fragsHolder */]);
+        this.game.load.spritesheet('cowboy', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["e" /* cowboySprite */], 64, 64, 5);
+        this.game.load.spritesheet('zombie1-walk', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["v" /* zombie1Walk */], 64, 64, 64);
+        this.game.load.spritesheet('zombie1-death', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["u" /* zombie1Death */], 64, 64, 32);
+        this.game.load.spritesheet('zombie1-attack', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["t" /* zombie1Attack */], 64, 64, 32);
+        this.game.load.spritesheet('zombie3-walk', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["y" /* zombie3Walk */], 64, 64, 64);
+        this.game.load.spritesheet('zombie3-death', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["x" /* zombie3Death */], 64, 64, 32);
+        this.game.load.spritesheet('zombie3-attack', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["w" /* zombie3Attack */], 64, 64, 32);
+        this.game.load.spritesheet('ranger-walk', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["n" /* rangerWalk */], 64, 64, 32);
+        this.game.load.spritesheet('ranger-death', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["m" /* rangerDeath */], 64, 64, 16);
+        this.game.load.spritesheet('ranger-attack', __WEBPACK_IMPORTED_MODULE_1_lib_load_images__["l" /* rangerAttack */], 64, 64, 32);
     };
     PreloadState.prototype.create = function () {
         this.game.state.start('main');
@@ -108571,21 +108595,28 @@ var PreloadState = /** @class */ (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return winWall; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return winHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return fragsHolder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return restartButtonBackground; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return restartButtonIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return loseWall; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return loseHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return bulletsIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return bulletsBackground; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return fragIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return frafBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return zombie1Attack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return zombie1Death; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return zombie1Walk; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return zombie3Attack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return zombie3Death; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return zombie3Walk; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return rangerWalk; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return rangerDeath; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return rangerAttack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return highScoreBackground; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return tower; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return zombie1Attack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return zombie1Death; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return zombie1Walk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return zombie3Attack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return zombie3Death; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return zombie3Walk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return rangerWalk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return rangerDeath; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return rangerAttack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return highScoreBackground; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return tower; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return cowboySprite; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return background; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ballPng; });
@@ -108607,6 +108638,13 @@ var bulletsIcon = __webpack_require__(31);
 var bulletsBackground = __webpack_require__(32);
 var fragIcon = __webpack_require__(33);
 var frafBackground = __webpack_require__(34);
+var loseHeader = __webpack_require__(35);
+var loseWall = __webpack_require__(36);
+var winHeader = __webpack_require__(37);
+var winWall = __webpack_require__(38);
+var restartButtonBackground = __webpack_require__(39);
+var restartButtonIcon = __webpack_require__(40);
+var fragsHolder = __webpack_require__(41);
 
 
 
@@ -108720,6 +108758,48 @@ module.exports = __webpack_require__.p + "assets/img/frags_background.png";
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/Lose_red_header.png";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/Lose_lose_wall.png";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/win_green_header.png";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/win_win_wall.png";
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/settings_restart_button.png";
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/settings_restart_sign.png";
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/win_skulls_holder.png";
+
+/***/ }),
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108750,18 +108830,18 @@ var BootState = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 36 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainState; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_states_state__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_components_enemy__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_components_hero__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_components_bullets__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lib_configs_unit_config__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_services_random_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_components_ranger__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_components_enemy__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_components_hero__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_components_bullets__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lib_configs_unit_config__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lib_random__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_components_ranger__ = __webpack_require__(51);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -108787,27 +108867,43 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 
 
 
+var defaultConfig = {
+    enemiesMax: 4
+};
 var MainState = /** @class */ (function (_super) {
     __extends(MainState, _super);
     function MainState() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.units = [];
         _this.enemiesMax = 4;
-        _this.deathToll = 0;
+        _this.frags = 0;
         _this.fireRate = 100;
         _this.nextFire = 0;
+        _this.level = 0;
         _this.unitKill = function (unit) {
-            var lastElementIndex = _this.units.length - 1;
             var deletedElementIndex = +unit.getBody().name;
-            var last = _this.units[lastElementIndex];
-            last.setName(deletedElementIndex);
-            _this.units.splice(deletedElementIndex, 1, last);
-            _this.units.splice(lastElementIndex, 1);
+            setTimeout(function () {
+                _this.units.splice(deletedElementIndex, 1, _this.createUnit(deletedElementIndex));
+            }, 0);
+            if (_this.frags % 10 === 0 && _this.frags !== 0) {
+                _this.enemiesMax++;
+                _this.level++;
+                for (var i = _this.units.length; i < _this.enemiesMax; i++) {
+                    _this.units.push(_this.createUnit(i));
+                }
+            }
         };
         return _this;
     }
     MainState.prototype.create = function () {
         this.loadImages();
+        this.levelText = this.game.add.text(this.world.width / 2 - 70, 12, 'Level: 0', {
+            font: '28px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff'
+        });
+        this.levelText.stroke = '#000';
+        this.levelText.strokeThickness = 2;
         this.ammunitionCountText = this.game.add.text(this.world.width - 60, 12, '0', {
             font: '24px Arial',
             fontWeight: 'bold',
@@ -108832,25 +108928,39 @@ var MainState = /** @class */ (function (_super) {
     };
     MainState.prototype.update = function () {
         this.hero.update();
-        this.units.forEach(function (enemy) { return enemy.update(); });
-        for (var i = this.units.length - 1; i < this.enemiesMax - 1; i++) {
-            this.units.push(this.createUnit(i));
-        }
+        this.units.forEach(function (unit) { return unit.update(); });
         for (var i = 0; i < this.units.length; i++) {
             this.game.physics.arcade.overlap(this.units[i].getBody(), this.bullets.getGroup(), this.bulletHitRock, null, this);
         }
         if (this.hero.getHealth() === 0) {
+            var prevData = JSON.parse(localStorage.getItem('zombie-clicker'));
+            var newData = {
+                max: {
+                    wave: Math.max(this.level, prevData.max.wave),
+                    score: Math.max(this.frags, prevData.max.score)
+                },
+                current: {
+                    wave: this.level,
+                    score: this.frags
+                }
+            };
+            localStorage.setItem('zombie-clicker', JSON.stringify(newData));
             this.hero.kill();
-            this.game.state.start('game-over');
+            this.units = [];
+            this.level = 0;
+            this.frags = 0;
+            this.enemiesMax = defaultConfig.enemiesMax;
+            this.game.state.start('lose');
         }
     };
     MainState.prototype.render = function () {
-        this.highScoreText.text = '' + this.deathToll;
+        this.highScoreText.text = '' + this.frags;
         this.ammunitionCountText.text = '' + this.hero.getAmmunition();
+        this.levelText.text = 'Level: ' + this.level;
     };
     MainState.prototype.fire = function () {
         if (this.game.time.now > this.nextFire
-            // && this.ammunition > 0
+            && this.hero.getAmmunition() > 0
             && this.bullets.getGroup().countDead() > 0) {
             this.hero.ammunitionDecrement();
             this.nextFire = this.game.time.now + this.fireRate;
@@ -108863,22 +108973,20 @@ var MainState = /** @class */ (function (_super) {
         unit.damage(1);
         if (unit.getHealth() === 0) {
             this.unitKill(unit);
-            this.deathToll++;
             unit.kill();
+            if (!(unit instanceof __WEBPACK_IMPORTED_MODULE_6_components_ranger__["a" /* Ranger */])) {
+                this.frags++;
+            }
         }
-    };
-    MainState.prototype.onTap = function () {
-        this.hero.update();
-        this.fire();
     };
     MainState.prototype.createUnit = function (index) {
         var config = {
-            position: Object(__WEBPACK_IMPORTED_MODULE_5_services_random_service__["b" /* getRandomPointOnRectangle */])({ x: 0, y: 0 }, this.world.width, this.world.height),
+            position: Object(__WEBPACK_IMPORTED_MODULE_5_lib_random__["b" /* getRandomPointOnRectangle */])({ x: 0, y: 0 }, this.world.width, this.world.height),
             index: index,
             killCallback: this.unitKill
         };
-        if (Object(__WEBPACK_IMPORTED_MODULE_5_services_random_service__["a" /* getRandomIntByRange */])(0, 10) > 2) {
-            if (Object(__WEBPACK_IMPORTED_MODULE_5_services_random_service__["a" /* getRandomIntByRange */])(0, 6) > 2) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_5_lib_random__["a" /* getRandomIntByRange */])(0, 10) > 2) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_5_lib_random__["a" /* getRandomIntByRange */])(0, 6) > 2) {
                 return new __WEBPACK_IMPORTED_MODULE_1_components_enemy__["a" /* Enemy */](this.game, this.hero, __assign({}, __WEBPACK_IMPORTED_MODULE_4_lib_configs_unit_config__["c" /* zombie3Config */], config));
             }
             else {
@@ -108888,6 +108996,10 @@ var MainState = /** @class */ (function (_super) {
         else {
             return new __WEBPACK_IMPORTED_MODULE_6_components_ranger__["a" /* Ranger */](this.game, this.hero, __assign({}, __WEBPACK_IMPORTED_MODULE_4_lib_configs_unit_config__["a" /* rangerConfig */], config));
         }
+    };
+    MainState.prototype.onTap = function () {
+        this.hero.update();
+        this.fire();
     };
     MainState.prototype.loadImages = function () {
         this.game.add.image(0, 0, 'high-score-background');
@@ -108915,7 +109027,7 @@ var MainState = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 37 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108959,7 +109071,7 @@ var Enemy = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 38 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108988,7 +109100,7 @@ var Health = /** @class */ (function () {
 
 
 /***/ }),
-/* 39 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109001,19 +109113,19 @@ function getHealthConfig(health, position) {
             current: health
         },
         position: {
-            x: position.x,
+            x: position.x + 150,
             y: position.y + 30
         },
         size: {
-            width: 100,
-            height: 10
+            width: 50,
+            height: 5
         }
     };
 }
 
 
 /***/ }),
-/* 40 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109062,16 +109174,6 @@ var Hero = /** @class */ (function () {
         this.healthMax = 10;
         this.healthCurrent = this.healthMax;
         this.ammunition = 30;
-        this.heal = function (healSize, ammunition) {
-            if (healSize + _this.healthCurrent >= _this.healthCurrent) {
-                _this.healthCurrent = _this.healthMax;
-            }
-            else {
-                _this.healthCurrent += healSize;
-            }
-            _this.healthBar.setCurrentValue(_this.healthCurrent);
-            _this.ammunition += ammunition;
-        };
         this.update = function () {
             var angleInRadians = _this.game.physics.arcade.angleToPointer(_this.body);
             var angle;
@@ -109095,6 +109197,16 @@ var Hero = /** @class */ (function () {
             else {
                 _this.body.scale.x = 1;
             }
+        };
+        this.heal = function (healSize, ammunition) {
+            if (healSize + _this.healthCurrent >= _this.healthMax) {
+                _this.healthCurrent = _this.healthMax;
+            }
+            else {
+                _this.healthCurrent += healSize;
+            }
+            _this.healthBar.setCurrentValue(_this.healthCurrent);
+            _this.ammunition += ammunition;
         };
         this.damage = function (damageSize) {
             if (damageSize >= _this.healthCurrent) {
@@ -109159,7 +109271,7 @@ var Hero = /** @class */ (function () {
 
 
 /***/ }),
-/* 41 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109189,7 +109301,7 @@ var Bullets = /** @class */ (function () {
 
 
 /***/ }),
-/* 42 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109232,13 +109344,13 @@ var rangerConfig = {
     },
     speed: 35,
     health: 1,
-    healSize: 2,
+    healSize: 1,
     ammunitionCount: 5
 };
 
 
 /***/ }),
-/* 43 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109296,7 +109408,7 @@ function getEndVector(start, length, angle) {
 
 
 /***/ }),
-/* 44 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109339,7 +109451,7 @@ var Ranger = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 45 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109369,7 +109481,7 @@ var GameOverState = /** @class */ (function (_super) {
         this.gameOverText.text = 'Game over\nClick to restart';
         this.gameOverText.visible = true;
         this.game.input.onTap.addOnce(function () {
-            _this.game.state.start('main', false, true);
+            _this.game.state.start('main');
         }, this);
     };
     return GameOverState;
@@ -109378,7 +109490,180 @@ var GameOverState = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 46 */
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoseState; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(0);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var LoseState = /** @class */ (function (_super) {
+    __extends(LoseState, _super);
+    function LoseState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LoseState.prototype.create = function () {
+        var _this = this;
+        var data = JSON.parse(localStorage.getItem('zombie-clicker'));
+        var background = this.game.add.tileSprite(0, 0, this.world.width, this.world.height, 'background');
+        this.game.add.image(this.world.centerX - 70, this.world.centerY - 27, 'tower')
+            .scale.set(.7);
+        var backgroundHeight = 1080;
+        var backgroundWidth = 1920;
+        var heightCoefficient = this.game.world.height / backgroundHeight;
+        var widthCoefficient = this.game.world.width / backgroundWidth;
+        background.tileScale.x = widthCoefficient;
+        background.tileScale.y = heightCoefficient;
+        var hero = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cowboy');
+        hero.anchor.set(.5);
+        var redHeader = this.game.add.image(0, 0, 'lose-red-header');
+        redHeader.scale.set(widthCoefficient);
+        var loseWall = this.game.add.image(0, this.game.world.height - 300 * widthCoefficient, 'lose-red-wall');
+        loseWall.scale.set(widthCoefficient);
+        var gameOverText = this.game.add.text(this.game.world.centerX, 15, 'Game Over', {
+            font: '40px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff',
+        });
+        gameOverText.anchor.x = 0.5;
+        gameOverText.stroke = '#000';
+        gameOverText.strokeThickness = 2;
+        var waveText = this.game.add.text(this.game.world.centerX, 80, 'Wave ' + data.current.wave, {
+            font: '40px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff',
+        });
+        waveText.anchor.x = 0.5;
+        waveText.stroke = '#000';
+        waveText.strokeThickness = 2;
+        var restartButton = this.game.add.button(this.game.world.centerX, this.game.world.height * 2 / 3, 'restart-button-background', function () {
+            _this.game.state.start('main');
+        }, this);
+        restartButton.scale.set(.4);
+        restartButton.anchor.x = .5;
+        var restartIcon = this.game.add.image(this.game.world.centerX, this.game.world.height * 2 / 3, 'restart-button-icon');
+        restartIcon.scale.set(.4);
+        restartIcon.anchor.x = .5;
+        restartIcon.anchor.y = -.3;
+        var fragsHolderBackground = this.game.add.image(this.game.world.centerX, this.game.world.centerY, 'frags-wall');
+        fragsHolderBackground.anchor.x = .5;
+        fragsHolderBackground.anchor.y = .5;
+        fragsHolderBackground.scale.set(.45);
+        fragsHolderBackground.angle = 20;
+        var fragsHolderIcon = this.game.add.image(this.game.world.centerX, this.game.world.centerY, 'frag-icon');
+        fragsHolderIcon.anchor.x = 1.5;
+        fragsHolderIcon.anchor.y = .6;
+        fragsHolderIcon.scale.set(.9);
+        fragsHolderIcon.angle = 20;
+        var fragsHolderText = this.game.add.text(this.game.world.centerX, this.game.world.centerY - 30, data.current.score, {
+            font: '55px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff',
+        });
+        fragsHolderText.angle = 20;
+        fragsHolderText.stroke = '#000';
+        fragsHolderText.strokeThickness = 2;
+    };
+    return LoseState;
+}(__WEBPACK_IMPORTED_MODULE_0__state__["a" /* default */]));
+
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WinState; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(0);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var WinState = /** @class */ (function (_super) {
+    __extends(WinState, _super);
+    function WinState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    WinState.prototype.create = function () {
+        var data = JSON.parse(localStorage.getItem('zombie-clicker'));
+        var background = this.game.add.tileSprite(0, 0, this.world.width, this.world.height, 'background');
+        this.game.add.image(this.world.centerX - 70, this.world.centerY - 27, 'tower')
+            .scale.set(.7);
+        var backgroundHeight = 1080;
+        var backgroundWidth = 1920;
+        var heightCoefficient = this.game.world.height / backgroundHeight;
+        var widthCoefficient = this.game.world.width / backgroundWidth;
+        background.tileScale.x = widthCoefficient;
+        background.tileScale.y = heightCoefficient;
+        var hero = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cowboy');
+        hero.anchor.set(.5);
+        var greenHeader = this.game.add.image(0, 0, 'win-green-header');
+        greenHeader.scale.set(widthCoefficient);
+        var topMargin;
+        if (this.game.world.height < 500) {
+            topMargin = 0;
+        }
+        else if (this.game.world.height < 700) {
+            ;
+            topMargin = 140;
+        }
+        else {
+            topMargin = 230;
+        }
+        var winWall = this.game.add.image(0, topMargin, 'win-wall');
+        winWall.scale.set(widthCoefficient);
+        var winText = this.game.add.text(this.game.world.centerX, 15, 'YOU WIN', {
+            font: '55px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff',
+        });
+        winText.anchor.x = 0.5;
+        winText.stroke = '#000';
+        winText.strokeThickness = 2;
+        var fragsHolderBackground = this.game.add.image(this.game.world.centerX, this.game.world.centerY, 'frags-wall');
+        fragsHolderBackground.anchor.x = .5;
+        fragsHolderBackground.anchor.y = .5;
+        fragsHolderBackground.scale.set(.45);
+        fragsHolderBackground.angle = -20;
+        var fragsHolderIcon = this.game.add.image(this.game.world.centerX, this.game.world.centerY, 'frag-icon');
+        fragsHolderIcon.anchor.x = 1.5;
+        fragsHolderIcon.anchor.y = .6;
+        fragsHolderIcon.scale.set(.9);
+        fragsHolderIcon.angle = -20;
+        var fragsHolderText = this.game.add.text(this.game.world.centerX, this.game.world.centerY - 30, data.current.score, {
+            font: '55px Arial',
+            fontWeight: 'bold',
+            fill: '#ffffff',
+        });
+        fragsHolderText.angle = -20;
+        fragsHolderText.stroke = '#000';
+        fragsHolderText.strokeThickness = 2;
+    };
+    return WinState;
+}(__WEBPACK_IMPORTED_MODULE_0__state__["a" /* default */]));
+
+
+
+/***/ }),
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon.ico";
