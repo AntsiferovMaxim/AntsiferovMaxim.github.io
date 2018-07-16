@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/general/32px/icon1-technology</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/general/32px/icon1-technology" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval-11-Copy" fill="#DED5FC" cx="16" cy="16" r="16"></circle>
+            <g id="icons/general/risk-score-page/32/check-type" stroke-width="1" transform="translate(10.000000, 7.000000)">
+                <path d="M2.4,0 C1.074,0 0,1.0628125 0,2.375 L0,16.625 C0,17.9371875 1.074,19 2.4,19 L9.6,19 C10.926,19 12,17.9371875 12,16.625 L12,2.375 C12,1.0628125 10.926,0 9.6,0 L2.4,0 Z" id="Combined-Shape" fill="#6743DF"></path>
+                <path d="M3.10135651,1.78125 C3.34588438,2.47308297 4.00568257,2.96875 4.78125,2.96875 L7.21875,2.96875 C7.99431743,2.96875 8.65411562,2.47308297 8.89864349,1.78125 L10.2,1.78125 C10.5313708,1.78125 10.8,2.04987915 10.8,2.38125 L10.8,16.61875 C10.8,16.9501208 10.5313708,17.21875 10.2,17.21875 L1.8,17.21875 C1.46862915,17.21875 1.2,16.9501208 1.2,16.61875 L1.2,2.38125 C1.2,2.04987915 1.46862915,1.78125 1.8,1.78125 L3.10135651,1.78125 Z" id="Combined-Shape" fill="#BFB1EC"></path>
+                <rect id="Rectangle-3" fill="#6743DF" x="3" y="16" width="6" height="1" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

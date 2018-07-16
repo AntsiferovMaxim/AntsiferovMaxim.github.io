@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/general/36px/check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/general/36px/check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval" fill="#1AC54D" fill-rule="evenodd" cx="18" cy="18" r="16"></circle>
+            <path d="M18,36 C8.0588745,36 0,27.9411255 0,18 C0,8.0588745 8.0588745,0 18,0 C27.9411255,0 36,8.0588745 36,18 C36,27.9411255 27.9411255,36 18,36 Z M18,32 C25.7319865,32 32,25.7319865 32,18 C32,10.2680135 25.7319865,4 18,4 C10.2680135,4 4,10.2680135 4,18 C4,25.7319865 10.2680135,32 18,32 Z" id="Oval-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M17.1111111,20.7366041 L23.9905243,13.857191 C24.5112233,13.3364919 25.3554433,13.3364919 25.8761424,13.857191 C26.3968414,14.37789 26.3968414,15.22211 25.8761424,15.742809 L18.0539202,23.5650313 C17.7935706,23.8253808 17.4523409,23.9555556 17.1111111,23.9555556 C16.7698814,23.9555556 16.4286516,23.8253808 16.1683021,23.5650313 L12.257191,19.6539202 C11.7364919,19.1332211 11.7364919,18.2890011 12.257191,17.7683021 C12.77789,17.247603 13.62211,17.247603 14.142809,17.7683021 L17.1111111,20.7366041 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
