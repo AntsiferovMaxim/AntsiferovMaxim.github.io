@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/general/32px/watch</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/general/32px/watch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#6743DF" fill-rule="nonzero" id="Combined-Shape">
+            <path d="M17.8823529,15.2194654 L17.8823529,9.54646612 C17.8823529,8.50623307 17.0395948,7.66295756 16,7.66295756 C14.9604052,7.66295756 14.1176471,8.50623307 14.1176471,9.54646612 L14.1176471,16 C14.117648,16.4822366 14.3015813,16.9644617 14.6694095,17.3322759 L18.9719305,21.6346318 C19.7072747,22.3699477 20.8991146,22.3695589 21.6339795,21.6337633 C22.3688443,20.8979676 22.3684557,19.705396 21.6331115,18.9700801 L17.8823529,15.2194654 Z M32,16 C32,24.836708 24.8364332,32 16,32 C7.16356682,32 0,24.836708 0,16 C0,7.16329195 7.16356682,0 16,0 C24.8364332,0 32,7.16329195 32,16 Z"></path>
+        </g>
+    </g>
+</svg>
