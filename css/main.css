@@ -279,15 +279,7 @@ body {
       justify-content: space-between;
       align-items: center;
       height: 80px;
-      /*.mobile {
-        display: none;
-      }
-
-      @media (min-width: 730px) {
-        .mobile {
-          display: block;
-        }
-      }*/ }
+      position: relative; }
       .header-wrapper .header .header-content .menu {
         display: flex;
         flex-direction: row;
@@ -370,6 +362,50 @@ body {
           display: none; }
         .header-wrapper .header .header-content .menu {
           display: none; } }
+      .header-wrapper .header .header-content .mobile {
+        display: none; }
+        .header-wrapper .header .header-content .mobile__contacts {
+          display: flex;
+          justify-content: center; }
+          .header-wrapper .header .header-content .mobile__contacts a {
+            display: block;
+            width: 20px;
+            margin: 0 20px; }
+        .header-wrapper .header .header-content .mobile__nav {
+          position: absolute;
+          display: none;
+          background: white;
+          left: 0px;
+          right: 0px;
+          top: 15px;
+          padding: 20px;
+          border-radius: 3px; }
+          .header-wrapper .header .header-content .mobile__nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none; }
+          .header-wrapper .header .header-content .mobile__nav li {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            color: #403F6F;
+            text-transform: uppercase; }
+            .header-wrapper .header .header-content .mobile__nav li a {
+              color: inherit;
+              text-decoration: none; }
+      .header-wrapper .header .header-content .burger-menu {
+        background: none;
+        border: none;
+        outline: none; }
+      .header-wrapper .header .header-content .burger-close {
+        position: absolute;
+        right: 10px;
+        top: 10px; }
+      @media (max-width: 730px) {
+        .header-wrapper .header .header-content .mobile {
+          display: block; } }
 
 .footer-wrapper {
   padding-top: 56px;
